@@ -1,0 +1,180 @@
+// Global namespace for nav component
+$nav-namespace: "c-nav" !default;
+
+.#{$nav-namespace} {
+	font-size: $font-size--s;
+	padding-left: 0;
+	margin-left: 0;
+	list-style-type: none;
+	width: 100%;
+
+	&--primary {
+		min-height: 74px;
+	}
+
+	&--secondary {
+		border-top: solid 1px #DFE9F2;
+		min-height: 50px;
+	}
+
+	//Remove secondary nav items until breakpoint hits tablet
+	@include until($small-screen) {
+	  &--secondary {
+	    display: none;
+	  }
+	 }
+
+	&__logo {
+		background-image: url(../images/ain-logo-dark-with-blue-icon-e880b785.png);
+		background-repeat: no-repeat;
+		display: block;
+		width: 147px;
+		height: 49px;
+		margin: 12px;
+	}
+
+	&__icon {
+		background-image: url(../images/icon-ain-dark-blue-a53d3b2f.png);
+		background-repeat: no-repeat;
+		display: block;
+		width: 47px;
+		height: 47px;
+		margin: 13px;
+	}
+
+	@media
+	(-webkit-min-device-pixel-ratio: 2),
+	(min-resolution: 192dpi) {
+			/* Retina-specific stuff here */
+
+		&__logo {
+			background-image: url(../images/ain-logo-dark-with-blue-icon@2x-82707f60.png);
+			background-size: 147px 49px;
+
+		}
+
+		&__icon {
+			background-image: url(../images/icon-ain-dark-blue@2x-a8d3a6bb.png);
+			background-size: 47px 47px;
+		}
+
+	}
+
+	&__network {
+		font-size: 12px;
+		padding: 1.5rem;
+	}
+
+	@include until($small-screen) {
+		&__network {
+			display: none;
+		}
+	}
+
+	&__items {
+		margin: 0 0 0 1rem;
+	}
+
+	//Remove all nav items until breakpoint hits tablet
+	@include until($small-screen) {
+	  .c-nav__item {
+	    display: none;
+	  }
+	 }
+
+	&__item {
+		display: inline-block;
+	}
+
+	&__link-accent {
+		display: inline-block;
+		margin: 0rem 1rem;
+		text-decoration: none;
+		padding: 1rem 0rem;
+	}
+
+	&__link-accent:hover:after, &__link-accent:active {
+		display: block
+	}
+
+	&__link-accent:after {
+		display: none;
+		content: "";
+		position: absolute;
+		bottom: 0px;
+		height: 3px;
+		left: 0;
+		right: 0;
+		background-color: $brand-blue;
+	}
+
+	&__link {
+		color: $gray-darker;
+		display: inline-block;
+		padding: 1rem;
+		text-decoration: none;
+
+		&:hover {
+			color: $gray-darker;
+		}
+
+		&.active {
+			color: $gray-darker;
+		}
+	}
+
+	&__button {
+		border: solid 2px #CDD3D9;
+		background-color: $color-white;
+		padding: 0.5rem 2rem;
+		border-radius: 4px;
+		text-decoration: none;
+		vertical-align: middle;
+		margin-right: 20px;
+	}
+}
+
+//Remove text links until breakpoint hits larger screen
+@include until($large-screen) {
+  .c-nav__link-text {
+    display: none;
+  }
+ }
+
+// nav alignment
+.c-nav__left {
+	border-right: solid 1px #DFE9F2;
+}
+
+.c-nav__right {
+	border-left: solid 1px #DFE9F2;
+}
+
+// search
+.c-nav__search {
+	outline: none;
+	border: 0;
+	padding: 1.5rem 0.5rem;
+}
+
+
+
+.user-avatar {
+	background: linear-gradient(180deg, #FAD961 0%, #F76B1C 100%);
+	border-radius: 100%;
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+}
+
+//Secondary Nav – Fundraise
+
+.nudges {
+	padding: 12px;
+
+}
+
+.nudges-count {
+	margin-right: 20px;
+	font-size: 14px;
+}

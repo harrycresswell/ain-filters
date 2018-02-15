@@ -1,0 +1,18 @@
+// Icon for the network
+.c-icon-network {
+  background-image: url('../images/maps-sprite-3e5f57ba.png');
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .c-icon-network {
+    background-image: url('../images/maps-sprite@2x-1e316076.png');
+    background-size: 32px 4200px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.c-icon-united-kingdom {
+  background-position: -0px -3984px;
+  width: 32px;
+  height: 24px;
+}

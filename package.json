@@ -1,0 +1,34 @@
+{
+  "name": "ain-filters",
+  "version": "1.0.0",
+  "description": "A hugo build for AIN filters prototype",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harrycresswell/ain-filters"
+  },
+  "keywords": [
+    "gulp",
+    "netlify",
+    "sass"
+  ],
+  "author": "Harry Cresswell",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-hash": "^3.1.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-shell": "^0.6.3",
+    "gulp-sourcemaps": "^2.6.4"
+  },
+  "dependencies": {
+    "gulp-imagemin": "^4.1.0",
+    "gulp-responsive": "^2.9.0",
+    "imagemin-mozjpeg": "^7.0.0"
+  }
+}
