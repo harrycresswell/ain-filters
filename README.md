@@ -1,5 +1,5 @@
-# hc
-This is the source code for my personal website :)
+# AIN Filters
+This a front end prototype for filters used on bricktribe
 
 ## Getting started
 If you want to grab a copy to learn from follow the setup below.
@@ -15,7 +15,7 @@ If you want to grab a copy to learn from follow the setup below.
 ## Usage
 
 ```
-git clone https://github.com/harrycresswell/hc.git
+git clone https://github.com/harrycresswell/ain-filters.git
 cd hc
 ```
 - Then run `npm install` to install node dependencies
@@ -23,9 +23,6 @@ cd hc
 - for a production ready build run `gulp prod`
 the site is now ready for deployment
 (make sure you update the `baseurl` in `config.toml`)
-
-### Adding content
-- `hugo new articles/ARTICLE-NAME.md`
 
 ### Compile the site to public folder
 - run `hugo --verbose`
@@ -42,5 +39,3 @@ rm -rf public
 hugo
 gulp
 ```
-
-**Props to [Dan Bahrami](http://danbahrami.io/articles/building-a-production-website-with-hugo-and-gulp-js/) for getting me started with a great Hugo-gulp workflow**
