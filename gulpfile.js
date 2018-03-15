@@ -3,7 +3,7 @@ var gulp         = require('gulp');
     autoprefixer = require('gulp-autoprefixer');
     del          = require('del');
     shell        = require('gulp-shell')
-    sourcemaps   = require('gulp-sourcemaps');
+    //sourcemaps   = require('gulp-sourcemaps');
 
 
 // Compile SCSS files to CSS
@@ -14,10 +14,10 @@ gulp.task('scss', function () {
 
     // Compile hashed css files
     gulp.src('src/scss/**/*.scss')
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(sass({outputStyle : 'compressed'}))
         .pipe(autoprefixer({browsers : ['last 20 versions']}))
-        .pipe(sourcemaps.write('.'))
+        //.pipe(sourcemaps.write('.'))
         .pipe(gulp.dest('static/css')) // Write the renamed files
 });
 

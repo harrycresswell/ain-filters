@@ -1,0 +1,59 @@
+<div class="FilterPopup FilterPopup--price">
+  <h5>Set your price range</h5>
+
+  <div class="mt2 FilterRange">
+  <p>Show projects between <span class="FilterRange-val">£</span><span class="FilterRange-val" id="slider-snap-value-lower">500.00</span><br/>
+  and <span class="FilterRange-val">£</span><span class="FilterRange-val" id="slider-snap-value-upper">1000.00</span>
+  </p>
+  <div class="noUi-target noUi-ltr noUi-horizontal mt4" id="slider-snap"></div>
+
+
+  <script>
+
+  var snapSlider = document.getElementById('slider-snap');
+
+  noUiSlider.create(snapSlider, {
+    start: [ 10000, 250000 ],
+    snap: true,
+    connect: true,
+    range: {
+      'min': 0,
+      '10%': 10000,
+      '20%': 25000,
+      '30%': 50000,
+      '40%': 100000,
+      '50%': 250000,
+      '60%': 500000,
+      '70%': 1000000,
+      '80%': 5000000,
+      '90%': 10000000,
+      'max': 50000000
+    }
+  });
+  </script>
+    <script>
+    var snapValues = [
+      document.getElementById('slider-snap-value-lower'),
+      document.getElementById('slider-snap-value-upper')
+    ];
+
+    snapSlider.noUiSlider.on('update', function( values, handle ) {
+      snapValues[handle].innerHTML = values[handle];
+    });
+    </script>
+  </div>
+
+  <div class="Flex-row mt5">
+      <div class="Flex-column">
+        <button class="Link">Clear</button>
+      </div>
+      <div class="Flex-column tr">
+        <button class="Link color-brand">Apply filter</button>
+      </div>
+  </div>
+  <!--<span class="FilterPopup-close">
+    <div class="Icon Icon--s Button Button--secondary Button--round">
+      <i class="material-icons md-18">close</i>
+    </div>
+  </span>-->
+</div>

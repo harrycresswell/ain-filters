@@ -1,0 +1,76 @@
+/**
+ * Filter
+ */
+
+ /**
+ * Component: Filter block
+ */
+
+ .Filter {
+  padding: 16px 16px 0 16px;
+}
+
+/**
+* Component: Filter element
+*/
+
+.Filter-item {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+/**
+* Component: FilterPopup block
+*/
+
+.FilterPopup {
+  display: none;
+  position: absolute;
+  top: 58px !important;
+  left: 0px;
+  z-index: 10;
+  background: #ffffff;
+  -webkit-box-shadow: 0 14px 36px 2px rgba(0,0,0,0.4);
+  box-shadow: 0 14px 36px 2px rgba(0,0,0,0.4);
+  padding: 32px;
+  overflow-x: hidden;
+  white-space: normal;
+  overflow-y: scroll;
+  max-height: -webkit-calc(100vh - 360px);
+  max-height: calc(100vh - 300px);
+  min-width: 360px;
+}
+
+/**
+* Component: FilterRange block
+*/
+
+.FilterRange {
+  max-width: 300px;
+}
+
+
+/**
+* Component: FilterRange element
+*/
+
+.FilterRange-val {
+  color: #4A8CFF;
+}
+
+@include until($phone-wide) {
+
+  .FilterPopup--property {
+    left: -12px;
+  }
+
+  .FilterPopup--funding {
+    left: -156px;
+  }
+
+  .FilterPopup--price {
+    left: -12px;
+  }
+
+}

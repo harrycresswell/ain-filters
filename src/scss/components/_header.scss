@@ -1,0 +1,30 @@
+/**
+ * Header
+ */
+
+.c-header {
+  box-shadow: none;
+  border-bottom: solid 1px #dce0e0;
+}
+
+.c-nav__left,
+.c-nav__right,
+.notification-indicator-user-avatar {
+  border: 0;
+}
+
+.c-nav__icon {
+  background-repeat: no-repeat;
+background-size: 198px 47px;
+width: 198px;
+height: 47px;
+   background-image: url(https://www.bricktribe.com/assets/img/logo/logo-bricktribe-dark-wordmark-color-icon-bg-beta@2x.png);
+}
+
+.c-nav__middle {
+  height: 74px;
+}
+
+input.c-nav__search {
+  height: 74px !important;
+}
