@@ -1,0 +1,22 @@
+<div class="FilterPopup FilterPopup--location">
+  <h5 class="mb4">Select Location</h5>
+
+  {{ range .Site.Data.locations.location }}
+  <div class="mt2">
+      <input class="material-icons" type="checkbox">
+          <label for="test">{{ .name }}</label>
+      </input>
+  </div>
+  {{ end }}
+
+  <div class="Flex-row Flex--nr mt4">
+      <div class="Flex-column">
+        <button class="Link">Clear</button>
+
+      </div>
+      <div class="Flex-column tr">
+        <button class="Link color-brand">Apply filter</button>
+      </div>
+  </div>
+
+</div>

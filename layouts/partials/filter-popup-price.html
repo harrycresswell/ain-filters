@@ -10,11 +10,14 @@
 
   <script>
 
-  var snapSlider = document.getElementById('slider-snap');
+  var snapSlider = document.getElementById('slider-snap')
 
   noUiSlider.create(snapSlider, {
+    // two handles
     start: [ 10000, 250000 ],
+    // they snap
     snap: true,
+    // they are connected
     connect: true,
     range: {
       'min': 0,
@@ -43,7 +46,7 @@
     </script>
   </div>
 
-  <div class="Flex-row mt5">
+  <div class="Flex-row Flex--nr mt5">
       <div class="Flex-column">
         <button class="Link">Clear</button>
       </div>
@@ -51,9 +54,5 @@
         <button class="Link color-brand">Apply filter</button>
       </div>
   </div>
-  <!--<span class="FilterPopup-close">
-    <div class="Icon Icon--s Button Button--secondary Button--round">
-      <i class="material-icons md-18">close</i>
-    </div>
-  </span>-->
+
 </div>
