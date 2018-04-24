@@ -7,7 +7,8 @@
  */
 
  .Filter {
-  padding: 16px 16px 0 16px;
+  padding: 16px 0 0 0;
+  border-bottom: solid 1px #e8e8e8;
 }
 
 /**
@@ -17,6 +18,7 @@
 .Filter-item {
   position: relative;
   display: inline-block;
+  margin-right: 8px;
   margin-bottom: 16px;
 }
 
@@ -27,7 +29,7 @@
 .FilterPopup {
   display: none;
   position: absolute;
-  top: 58px !important;
+  top: 48px !important;
   left: 0px;
   z-index: 10;
   background: #ffffff;
@@ -50,7 +52,6 @@
   max-width: 300px;
 }
 
-
 /**
 * Component: FilterRange element
 */
@@ -59,18 +60,37 @@
   color: #4A8CFF;
 }
 
+/**
+* Component: FilterSearch element
+*/
+
+.FilterSearch,
+.FilterButton {
+  margin-right: 16px;
+}
+
+@include until($phone-wide) {
+  .FilterSearch,
+  .FilterButton {
+    margin-right: 0;
+  }
+}
+
 @include until($phone-wide) {
 
+  .FilterPopup--quicklinks,
+  .FilterPopup--price,
+  .FilterPopup--country,
+  .FilterPopup--location,
+  .FilterPopup--industry,
+  .FilterPopup--stage,
+  .FilterPopup--language,
+  .FilterPopup--taxrelief,
+  .FilterPopup--fundingtype,
+  .FilterPopup--funding,
   .FilterPopup--property {
-    left: -12px;
-  }
-
-  .FilterPopup--funding {
-    left: -156px;
-  }
-
-  .FilterPopup--price {
-    left: -12px;
-  }
-
+    left: 0px;
+    margin: 16px;
+    position: fixed;
+   }
 }

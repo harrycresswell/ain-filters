@@ -1,0 +1,26 @@
+<div class="Filter">
+    <div class="Container">
+        <div class="Filter-item mr2">
+
+          <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Property Types</button>
+        {{ partial "filter-popup-property.html" . }}
+
+        </div><!--/.Filter-item -->
+
+        <div class="Filter-item mr2">
+
+            <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Funding Type</button>
+
+            {{ partial "filter-popup-funding.html" . }}
+
+        </div><!--/.Filter-item -->
+
+        <div class="Filter-item">
+
+            <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Price Range</button>
+
+            {{ partial "filter-popup-price.html" . }}
+
+        </div><!--/.Filter-item -->
+    </div><!--/.Container -->
+</div><!--/.Filter -->

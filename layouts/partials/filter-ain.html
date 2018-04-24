@@ -1,0 +1,77 @@
+<div class="Filter">
+    <div class="Container">
+        <div class="Filter-item">
+
+          <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Quick Links</button>
+
+          {{ partial "filter-popup-quick-links.html" . }}
+
+        </div><!--/.Filter-item -->
+
+        <div class="Filter-item">
+
+            <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Inv. Range</button>
+
+            {{ partial "filter-popup-price.html" . }}
+
+        </div><!--/.Filter-item -->
+
+        <div class="Filter-item">
+
+            <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Country</button>
+
+            {{ partial "filter-popup-country.html" . }}
+
+        </div><!--/.Filter-item -->
+
+        <div class="Filter-item">
+
+            <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Location</button>
+
+            {{ partial "filter-popup-location.html" . }}
+
+        </div><!--/.Filter-item -->
+
+        <div class="Filter-item">
+
+            <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Industry</button>
+
+            {{ partial "filter-popup-industry.html" . }}
+
+        </div><!--/.Filter-item -->
+
+        <div class="Filter-item">
+
+            <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Stage</button>
+
+            {{ partial "filter-popup-stage.html" . }}
+
+        </div><!--/.Filter-item -->
+
+        <div class="Filter-item">
+
+            <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Language</button>
+
+            {{ partial "filter-popup-language.html" . }}
+
+        </div><!--/.Filter-item -->
+
+        <div class="Filter-item">
+
+            <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Tax Relief</button>
+
+            {{ partial "filter-popup-taxrelief.html" . }}
+
+        </div><!--/.Filter-item -->
+
+        <div class="Filter-item">
+
+            <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Funding Type</button>
+
+            {{ partial "filter-popup-fundingtype.html" . }}
+
+        </div><!--/.Filter-item -->
+
+    </div><!--/.Container -->
+    {{ partial "search.html" . }}
+</div><!--/.Filter -->

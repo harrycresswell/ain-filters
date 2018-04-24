@@ -1,8 +1,5 @@
-// Global namespace for nav component
-$nav-namespace: "c-nav" !default;
-
-.#{$nav-namespace} {
-	font-size: $font-size--s;
+.Nav {
+	font-size: 14px;
 	padding-left: 0;
 	margin-left: 0;
 	list-style-type: none;
@@ -10,10 +7,12 @@ $nav-namespace: "c-nav" !default;
 
 	&--primary {
 		min-height: 74px;
+		border-bottom: solid 1px $color-border;
 	}
 
 	&--secondary {
-		border-top: solid 1px #DFE9F2;
+		border-bottom: solid 1px $color-border;
+		padding: 0 56px;
 		min-height: 50px;
 	}
 
@@ -24,8 +23,8 @@ $nav-namespace: "c-nav" !default;
 	  }
 	 }
 
-	&__logo {
-		background-image: url(../images/ain-logo-dark-with-blue-icon-e880b785.png);
+	&-logo {
+		background-image: url(../images/ain-logo-dark-with-blue-icon.png);
 		background-repeat: no-repeat;
 		display: block;
 		width: 147px;
@@ -33,13 +32,16 @@ $nav-namespace: "c-nav" !default;
 		margin: 12px;
 	}
 
-	&__icon {
-		background-image: url(../images/icon-ain-dark-blue-a53d3b2f.png);
+	&-icon {
 		background-repeat: no-repeat;
 		display: block;
+		margin: 13px;
+	}
+
+	&-icon--ain {
+		background-image: url(../images/icon-ain-dark-blue.png);
 		width: 47px;
 		height: 47px;
-		margin: 13px;
 	}
 
 	@media
@@ -47,14 +49,14 @@ $nav-namespace: "c-nav" !default;
 	(min-resolution: 192dpi) {
 			/* Retina-specific stuff here */
 
-		&__logo {
-			background-image: url(../images/ain-logo-dark-with-blue-icon@2x-82707f60.png);
+		&-logo {
+			background-image: url(../images/ain-logo-dark-with-blue-icon@2x.png);
 			background-size: 147px 49px;
 
 		}
 
-		&__icon {
-			background-image: url(../images/icon-ain-dark-blue@2x-a8d3a6bb.png);
+		&-icon--ain {
+			background-image: url(../images/icon-ain-dark-blue@2x.png);
 			background-size: 47px 47px;
 		}
 
@@ -66,38 +68,39 @@ $nav-namespace: "c-nav" !default;
 	}
 
 	@include until($small-screen) {
-		&__network {
+		&-network {
 			display: none;
 		}
 	}
 
-	&__items {
-		margin: 0 0 0 1rem;
+	&-items {
+		margin: 0;
 	}
 
 	//Remove all nav items until breakpoint hits tablet
 	@include until($small-screen) {
-	  .c-nav__item {
+	  .Nav-item {
 	    display: none;
 	  }
 	 }
 
-	&__item {
+	&-item {
 		display: inline-block;
 	}
 
-	&__link-accent {
+	&-link-accent {
+		color: $gray-dark;
 		display: inline-block;
 		margin: 0rem 1rem;
 		text-decoration: none;
 		padding: 1rem 0rem;
 	}
 
-	&__link-accent:hover:after, &__link-accent:active {
+	&-link-accent:hover:after, &-link-accent:active {
 		display: block
 	}
 
-	&__link-accent:after {
+	&-link-accent:after {
 		display: none;
 		content: "";
 		position: absolute;
@@ -108,7 +111,7 @@ $nav-namespace: "c-nav" !default;
 		background-color: $brand-blue;
 	}
 
-	&__link {
+	&-link {
 		color: $gray-darker;
 		display: inline-block;
 		padding: 1rem;
@@ -123,7 +126,7 @@ $nav-namespace: "c-nav" !default;
 		}
 	}
 
-	&__button {
+	&-button {
 		border: solid 2px #CDD3D9;
 		background-color: $color-white;
 		padding: 0.5rem 2rem;
@@ -136,22 +139,22 @@ $nav-namespace: "c-nav" !default;
 
 //Remove text links until breakpoint hits larger screen
 @include until($large-screen) {
-  .c-nav__link-text {
+  .Nav-link-text {
     display: none;
   }
  }
 
 // nav alignment
-.c-nav__left {
+.Nav-left {
 	border-right: solid 1px #DFE9F2;
 }
 
-.c-nav__right {
+.Nav-right {
 	border-left: solid 1px #DFE9F2;
 }
 
 // search
-.c-nav__search {
+.Nav-search {
 	outline: none;
 	border: 0;
 	padding: 1.5rem 0.5rem;
@@ -177,4 +180,25 @@ $nav-namespace: "c-nav" !default;
 .nudges-count {
 	margin-right: 20px;
 	font-size: 14px;
+}
+
+.Nav-left,
+.Nav-right,
+.notification-indicator-user-avatar {
+  border: 0;
+}
+
+.Nav-icon--bricktribe {
+  background-size: 198px 47px;
+  width: 198px;
+  height: 47px;
+  background-image: url('https://www.bricktribe.com/assets/img/logo/logo-bricktribe-dark-wordmark-color-icon-bg-beta@2x.png');
+}
+
+.Nav-middle {
+  height: 74px;
+}
+
+input.Nav-search {
+  height: 74px !important;
 }

@@ -21,6 +21,14 @@ gulp.task('scss', function () {
         .pipe(gulp.dest('static/css')) // Write the renamed files
 });
 
+// Hash images
+gulp.task('images', function () {
+    del(['static/images/**/*'])
+    gulp.src('src/images/**/*')
+        .pipe(gulp.dest('static/images'))
+});
+
+
 // Pipe JS to static folder
 gulp.task('js', function () {
     del(['static/js/**/*'])
@@ -29,8 +37,9 @@ gulp.task('js', function () {
 });
 
 // Watch asset folder for changes
-gulp.task('watch', ['scss', 'js'], function () {
+gulp.task('watch', ['scss', 'images', 'js'], function () {
     gulp.watch('src/scss/**/*', ['scss']);
+    gulp.watch('src/images/**/*', ['images'])
     gulp.watch('src/js/**/*', ['js']);
 });
 
@@ -38,7 +47,7 @@ gulp.task('watch', ['scss', 'js'], function () {
 gulp.task('default', ['watch']);
 
 // Run all tasks ready for production
-gulp.task('prod', ['scss', 'js']);
+gulp.task('prod', ['scss', 'images', 'js']);
 
 // Building the site in 'production mode' ready for deployment
 gulp.task('build', shell.task([
