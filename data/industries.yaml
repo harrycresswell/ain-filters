@@ -1,0 +1,30 @@
+industry:
+  - name: Agriculture
+  - name: Automotive
+  - name: Aviation
+  - name: Biotechnology & Life Sciences
+  - name: Building Services & Products
+  - name: Education & Training
+  - name: Energy & Mining
+  - name: Entertainment & Film
+  - name: Fashion & Beauty
+  - name: Finance, Business & Law
+  - name: Food & Beverage
+  - name: Greentech & Environmental
+  - name: Hospitality, Restaurants & Bars
+  - name: IT, Hardware & Software
+  - name: Internet, eCommerce & Apps
+  - name: Manufacturing
+  - name: Marketing & Advertising
+  - name: Media & Publishing
+  - name: Medical, Pharma & Health Care
+  - name: Personal Services
+  - name: Products & Inventions
+  - name: Real Estate
+  - name: Retail
+  - name: Security & Defence
+  - name: Sport & Leisure
+  - name: Technology
+  - name: Telecom & Mobile
+  - name: Tourism & Hotels
+  - name: Transportation

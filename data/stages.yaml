@@ -1,0 +1,7 @@
+stage:
+  - name: Pre-Startup/R&D
+  - name: MVP/Finished Product
+  - name: Achieving Sales
+  - name: Breaking Even
+  - name: Profitable
+  - name: Other
