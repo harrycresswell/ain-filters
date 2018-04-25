@@ -1,12 +1,11 @@
 <div class="FilterPopup FilterPopup--country">
-  <h5>Select a country</h5>
-  <div class="parent mt4">
+  <div class="Checkbox-parent Accordion mt2">
       <input  class="material-icons" type="checkbox" />
           <label>Europe</label>
       </input>
   </div>
-  <div>
-      <ul class="child">
+  <div class="Accordion-panel">
+      <ul class="Checkbox-child">
           {{ range .Site.Data.countries.continent.europe.country }}
           <li>
               <input class="material-icons" type="checkbox" />
@@ -16,13 +15,13 @@
           {{ end }}
       </ul>
   </div><!-- / end Europe -->
-  <div class="parent mt4">
+  <div class="Checkbox-parent Accordion mt4">
       <input  class="material-icons" type="checkbox" />
           <label>Asia and Oceania</label>
       </input>
   </div>
-  <div>
-      <ul class="child">
+  <div class="Accordion-panel">
+      <ul class="Checkbox-child">
           {{ range .Site.Data.countries.continent.asia.country }}
           <li>
               <input class="material-icons" type="checkbox" />
@@ -32,13 +31,13 @@
           {{ end }}
       </ul>
   </div><!-- / end Asia -->
-  <div class="parent mt4">
+  <div class="Checkbox-parent Accordion mt4">
       <input  class="material-icons" type="checkbox" />
           <label>North America</label>
       </input>
   </div>
-  <div>
-      <ul class="child">
+  <div class="Accordion-panel">
+      <ul class="Checkbox-child">
           {{ range .Site.Data.countries.continent.northamerica.country }}
           <li>
               <input class="material-icons" type="checkbox" />
@@ -48,13 +47,13 @@
           {{ end }}
       </ul>
   </div><!-- / end North America -->
-  <div class="parent mt4">
+  <div class="Checkbox-parent Accordion mt4">
       <input  class="material-icons" type="checkbox" />
           <label>South America</label>
       </input>
   </div>
-  <div>
-      <ul class="child">
+  <div class="Accordion-panel">
+      <ul class="Checkbox-child">
           {{ range .Site.Data.countries.continent.southamerica.country }}
           <li>
               <input class="material-icons" type="checkbox" />
@@ -64,13 +63,13 @@
           {{ end }}
       </ul>
   </div><!-- / end South America -->
-  <div class="parent mt4">
+  <div class="Checkbox-parent Accordion mt4">
       <input  class="material-icons" type="checkbox" />
           <label>Africa</label>
       </input>
   </div>
-  <div>
-      <ul class="child">
+  <div class="Accordion-panel">
+      <ul class="Checkbox-child">
           {{ range .Site.Data.countries.continent.africa.country }}
           <li>
               <input class="material-icons" type="checkbox" />

@@ -1,17 +1,17 @@
 // Input Checkboxes
-$(".parent input").on('click',function(){
+$(".Checkbox-parent input").on('click',function(){
   var _parent=$(this);
   var nextli=$(this).parent().next().children().children();
 
   if(_parent.prop('checked')){
-     console.log('parent checked');
+     console.log('Checkbox-parent checked');
      nextli.each(function(){
        $(this).children().prop('checked',true);
      });
 
   }
   else{
-    console.log('parent un checked');
+    console.log('Checkbox-parent un checked');
      nextli.each(function(){
        $(this).children().prop('checked',false);
      });
@@ -19,18 +19,18 @@ $(".parent input").on('click',function(){
   }
 });
 
-$(".child input").on('click',function(){
+$(".Checkbox-child input").on('click',function(){
 
   var ths=$(this);
   var parentinput=ths.closest('div').prev().children();
   var sibblingsli=ths.closest('ul').find('li');
 
   if(ths.prop('checked')){
-    console.log('child checked');
+    console.log('Checkbox-child checked');
     parentinput.prop('checked',true);
   }
   else{
-    console.log('child unchecked');
+    console.log('Checkbox-child unchecked');
        var status=true;
      sibblingsli.each(function(){
        console.log('sibb');
@@ -40,8 +40,26 @@ $(".child input").on('click',function(){
   }
 });
 
+// show hide accordion
+
+var acc = document.getElementsByClassName("Accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("Accordion--active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
+
 
 // FilterPopup Window
+
 var scrollTop = '';
 var newHeight = '100';
 
