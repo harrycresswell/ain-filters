@@ -1,19 +1,16 @@
 .Nav {
 	font-size: 14px;
-	padding-left: 0;
-	margin-left: 0;
 	list-style-type: none;
 	width: 100%;
 
 	&--primary {
-		min-height: 74px;
+		height: 72px;
 		border-bottom: solid 1px $color-border;
 	}
 
 	&--secondary {
 		border-bottom: solid 1px $color-border;
-		padding: 0 56px;
-		min-height: 50px;
+		height: 48px;
 	}
 
 	//Remove secondary nav items until breakpoint hits tablet
@@ -23,22 +20,36 @@
 	  }
 	 }
 
-	&-logo {
+	 &-logo {
+		 background-repeat: no-repeat;
+		 display: block;
+		 margin: 13px;
+	 }
+
+	&-logo--ain {
 		background-image: url(../images/ain-logo-dark-with-blue-icon.png);
 		background-repeat: no-repeat;
 		display: block;
-		width: 147px;
-		height: 49px;
+		width: 145px;
+		height: 46px;
 		margin: 12px;
 	}
 
-	&-icon {
-		background-repeat: no-repeat;
-		display: block;
-		margin: 13px;
+	&-logo--bricktribe {
+	  background-size: 196px 47px;
+	  width: 198px;
+	  height: 46px;
+	  background-image: url('https://www.bricktribe.com/assets/img/logo/logo-bricktribe-dark-wordmark-color-icon-bg-beta@2x.png');
 	}
 
-	&-icon--ain {
+	&-logo--seedtribe {
+	  background-size: 246px 47px;
+	  width: 248px;
+	  height: 46px;
+	  background-image: url('https://www.seedtribe.com//assets/img/logo/logo-seedtribe-by-ain-dark-color-icona@2x.png');
+	}
+
+	&-logo--ain-icon {
 		background-image: url(../images/icon-ain-dark-blue.png);
 		width: 47px;
 		height: 47px;
@@ -49,15 +60,15 @@
 	(min-resolution: 192dpi) {
 			/* Retina-specific stuff here */
 
-		&-logo {
+		&-logo--ain{
+			background-image: url(../images/icon-ain-dark-blue@2x.png);
+			background-size: 47px 47px;
+		}
+
+		&-logo--ain-icon {
 			background-image: url(../images/ain-logo-dark-with-blue-icon@2x.png);
 			background-size: 147px 49px;
 
-		}
-
-		&-icon--ain {
-			background-image: url(../images/icon-ain-dark-blue@2x.png);
-			background-size: 47px 47px;
 		}
 
 	}
@@ -75,6 +86,7 @@
 
 	&-items {
 		margin: 0;
+		padding: 0;
 	}
 
 	//Remove all nav items until breakpoint hits tablet
@@ -91,12 +103,13 @@
 	&-link-accent {
 		color: $gray-dark;
 		display: inline-block;
-		margin: 0rem 1rem;
-		text-decoration: none;
-		padding: 1rem 0rem;
+		position: relative;
+		margin-right: 16px;
+		line-height: 48px;
 	}
 
-	&-link-accent:hover:after, &-link-accent:active {
+	&-link-accent:hover:after,
+	&-link-accent:active {
 		display: block
 	}
 
@@ -114,7 +127,8 @@
 	&-link {
 		color: $gray-darker;
 		display: inline-block;
-		padding: 1rem;
+		line-height: 72px;
+		padding-right: 32px;
 		text-decoration: none;
 
 		&:hover {
@@ -139,18 +153,27 @@
 
 //Remove text links until breakpoint hits larger screen
 @include until($large-screen) {
-  .Nav-link-text {
+  .Nav-text {
     display: none;
   }
  }
 
+ .Nav-icon {
+	width: 32px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 30px;
+	margin-left: 10px;
+	vertical-align: middle;
+ }
+
 // nav alignment
 .Nav-left {
-	border-right: solid 1px #DFE9F2;
+	float: left;
 }
 
 .Nav-right {
-	border-left: solid 1px #DFE9F2;
+	float: right;
 }
 
 // search
@@ -162,17 +185,19 @@
 
 
 
-.user-avatar {
+.Nav-avatar {
 	background: linear-gradient(180deg, #FAD961 0%, #F76B1C 100%);
 	border-radius: 100%;
 	display: inline-block;
 	height: 40px;
 	width: 40px;
+	vertical-align: middle;
+	margin-right: 16px;
 }
 
 //Secondary Nav – Fundraise
 
-.nudges {
+.Nav-itemnudges {
 	padding: 12px;
 
 }
@@ -183,16 +208,9 @@
 }
 
 .Nav-left,
-.Nav-right,
-.notification-indicator-user-avatar {
+.Nav-right {
   border: 0;
-}
-
-.Nav-icon--bricktribe {
-  background-size: 198px 47px;
-  width: 198px;
-  height: 47px;
-  background-image: url('https://www.bricktribe.com/assets/img/logo/logo-bricktribe-dark-wordmark-color-icon-bg-beta@2x.png');
+	padding: 0;
 }
 
 .Nav-middle {
