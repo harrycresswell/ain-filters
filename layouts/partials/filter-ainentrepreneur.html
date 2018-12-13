@@ -1,0 +1,46 @@
+<div class="Filter">
+    <div class="Container">
+        <div class="Filter-item">
+
+          <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Quick Links</button>
+
+          {{ partial "filter-popup-quick-links-entrepreneur.html" . }}
+
+        </div><!--/.Filter-item -->
+
+        <div class="Filter-item">
+
+            <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Inv. Range</button>
+
+            {{ partial "filter-popup-price-entrepreneur.html" . }}
+
+        </div><!--/.Filter-item -->
+
+        <div class="Filter-item">
+
+            <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Country</button>
+
+            {{ partial "filter-popup-country.html" . }}
+
+        </div><!--/.Filter-item -->
+
+        <div class="Filter-item">
+
+            <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Location</button>
+
+            {{ partial "filter-popup-location.html" . }}
+
+        </div><!--/.Filter-item -->
+
+        <div class="Filter-item">
+
+            <button class="Button Button--tertiary Button--s js-FilterPopup-trigger">Industry</button>
+
+            {{ partial "filter-popup-industry.html" . }}
+
+        </div><!--/.Filter-item -->
+
+
+    </div><!--/.Container -->
+    {{ partial "search.html" . }}
+</div><!--/.Filter -->

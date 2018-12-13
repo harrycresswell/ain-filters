@@ -1,0 +1,53 @@
+<div class="FilterPopup FilterPopup--price">
+  <div class="FilterRange">
+  <p>Show investors with maximum investment limit of <span class="FilterRange-val">£</span><span class="FilterRange-val" id="slider-snap-value-lower">500.00</span>
+  </p>
+  <div class="noUi-target noUi-ltr noUi-horizontal mt4" id="slider-snap"></div>
+
+
+  <script>
+
+  var snapSlider = document.getElementById('slider-snap')
+
+  noUiSlider.create(snapSlider, {
+    // one handle
+    start: 25000,
+    // which snaps
+    snap: true,
+    // with range between
+    range: {
+      'min': 0,
+      '10%': 10000,
+      '20%': 25000,
+      '30%': 50000,
+      '40%': 100000,
+      '50%': 250000,
+      '60%': 500000,
+      '70%': 1000000,
+      '80%': 5000000,
+      '90%': 10000000,
+      'max': 50000000
+    }
+  });
+  </script>
+    <script>
+    var snapValue = [
+      document.getElementById('slider-snap-value-lower'),
+    ];
+
+    snapSlider.noUiSlider.on('update', function( value, handle ) {
+      snapValue[handle].innerHTML = value[handle];
+    });
+    </script>
+  </div>
+
+  <div class="Flex-row Flex--nr mt5">
+      <div class="Flex-column">
+        <button class="Link">Clear</button>
+      </div>
+      <div class="Flex-column tr">
+        <button class="Link color-brand">Apply filter</button>
+      </div>
+  </div>
+
+</div>
