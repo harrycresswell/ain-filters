@@ -9,9 +9,9 @@
 	}
 
 	&--secondary {
-		border-bottom: solid 1px $color-border;
-		height: 48px;
-	}
+		 border-bottom: solid 1px $color-border;
+		 height: 48px;
+	 }
 
 	//Remove secondary nav items until breakpoint hits tablet
 	@include until($small-screen) {
