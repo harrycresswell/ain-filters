@@ -30,6 +30,8 @@
     "gulp-imagemin": "^4.1.0",
     "gulp-responsive": "^2.9.0",
     "imagemin-mozjpeg": "^7.0.0",
-    "fstream": ">=1.0.12"
+    "fstream": ">=1.0.12",
+    "lodash": ">=4.17.11",
+    "extend": ">=3.0.2"
   }
 }
